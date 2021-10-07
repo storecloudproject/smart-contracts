@@ -126,3 +126,11 @@ type App struct {
 An important performance consideration for smart contracts on any blockchain system is the compiled contract data size. Contract data should be as compact as possible as it must be replicated across all nodes in the system and remain there in storage for a long time. WASM code is typically larger than EVM bytecode (for example) as WASM is much more general. To mitigate this larger payload size the CosmWasm project recommends writing contracts in Rust, rather than Go or Haskell, as Rust has no garbage collector and the standard library can be excluded from builds, both of which contribute to a smaller minified build.
 
 The CosmWasm module can be easily plugged into the Cosmos SDK to provide an extensible, customizable, blockchain framework with built-in Turing-complete smart contract support, robust ⅔ BFT consensus, and compatibility with the Cosmos ecosystem tools and support.
+
+## Store Smart Contracts
+
+Store is borrowing the best parts of the technologies mentioned above to build the fastest, most robust smart contract system possible.
+
+The system uses an LLVM intermediary compilation architecture similar to Solana's, with support for multiple general-purpose languages including C, Rust, and C++.
+
+![smart contract execution](./images/contracts.jpg)
